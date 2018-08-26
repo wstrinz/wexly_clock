@@ -16,6 +16,13 @@ defmodule WexlyClockWeb.PageCommander do
   def page_loaded(socket) do
     poke(socket, welcome_text: "This page has been drabbed")
 
+    poke(
+      socket,
+      people: [
+        %{name: "Will", status: "Working on this project"}
+      ]
+    )
+
     set_prop(
       socket,
       "div.jumbotron p.lead",
